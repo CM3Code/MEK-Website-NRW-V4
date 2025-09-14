@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEK Dienstkleidung (Für Den Rollenspiel Server NRW Netzwerk)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a2e;
+            color: #e0e0e0;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+
+    <!-- Hauptcontainer -->
+    <div class="max-w-6xl mx-auto">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl sm:text-5xl font-bold text-white mb-2">MEK Dienstkleidung</h1>
+            <p class="text-lg sm:text-xl text-gray-400">(Für Den Rollenspiel Server NRW Netzwerk)</p>
+        </header>
+
+        <!-- Tab-Navigation -->
+        <div class="flex justify-center items-center mb-8 bg-gray-900 rounded-xl p-2 border border-purple-900">
+            <button class="tab-button w-1/5 py-2 px-4 rounded-xl text-white font-semibold transition-colors duration-300 active" data-tab="infos">Infos</button>
+            <button class="tab-button w-1/5 py-2 px-4 rounded-xl text-white font-semibold transition-colors duration-300" data-tab="team">Team</button>
+            <button class="tab-button w-1/5 py-2 px-4 rounded-xl text-white font-semibold transition-colors duration-300" data-tab="dienstvorschriften">Dienstvorschriften</button>
+            <button class="tab-button w-1/5 py-2 px-4 rounded-xl text-white font-semibold transition-colors duration-300" data-tab="kleidung">Kleidung</button>
+            <button class="tab-button w-1/5 py-2 px-4 rounded-xl text-white font-semibold transition-colors duration-300" data-tab="changelogs">Changelogs</button>
+        </div>
+
+        <!-- Tab-Inhalt -->
+        <div id="tab-container">
+            <!-- Tab: Infos -->
+            <div id="infos" class="tab-content active">
+                <div class="bg-gray-800 p-6 rounded-2xl shadow-lg border border-purple-900 text-center mb-8">
+                    <h2 class="text-3xl font-bold mb-4 text-white">‼️WICHTIGE INFORMATIONEN⚠️</h2>
+                    <p class="text-gray-400 mb-8">Hier findest du alle wichtigen Informationen zu den Dienstgraden und den Dienstvorschriften des Mobilen Einsatzkommandos (MEK).</p>
+                    
+                    <div>
+                        <ul class="list-disc list-inside space-y-1 text-gray-300">
+                            <li>Es dürfen Keine Politische Tags Verwendet werden um das MEK Seriös zu halten.</li>
+                            <li>Die Dienstvorschriften sind strikt einzuhalten, um die Professionalität und Sicherheit des Teams zu gewährleisten.</li>
+                            <li>Bei Fragen oder Unsicherheiten wende dich bitte an deinen Vorgesetzten oder die Zugführung.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 p-6 rounded-2xl shadow-lg border border-purple-900 mb-8">
+                    <h2 class="text-3xl font-bold mb-4 text-white">Dienstgrad-Kennzeichnung</h2>
+
+                    <div class="mb-6">
+                        <ul class="list-disc list-inside space-y-1 text-gray-300">
+                            <li>MEK ZF = MEK Zugführer</li>
+                            <li>MEK GFA = MEK Gruppenführer Alpha</li>
+                            <li>MEK GFB = MEK Gruppenführer Bravo</li>
+                            <li>MEK TA1 = MEK Truppmann Alpha 1</li>
+                            <li>MEK TA2 = MEK Truppmann Alpha 2</li>
+                            <li>MEK TB1 = MEK Truppmann Bravo 1</li>
+                            <li>MEK TB2 = MEK Truppmann Bravo 2</li>
+                            <li>MEK TFA1 = MEK Truppenführer Alpha 1</li>
+                            <li>MEK TFA2 = MEK Truppenführer Alpha 2</li>
+                            <li>MEK TFB1 = MEK Truppenführer Bravo 1</li>
+                            <li>MEK TFB2 = MEK Truppenführer Bravo 2</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Team -->
+            <div id="team" class="tab-content">
+                <div class="bg-gray-800 p-6 rounded-2xl shadow-lg border border-purple-900 text-center">
+                    <h2 class="text-3xl font-bold mb-4 text-white">Teamübersicht</h2>
+                    <p class="text-gray-400 mb-8">Hier werden die Mitglieder der einzelnen Trupps und Teams aufgelistet.</p>
+                    
+                    <!-- Teams und Trupps Container -->
+                    <div class="space-y-12">
+                        <!-- Zugführung -->
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4 text-purple-400">Zugführung</h3>
+                            <div class="flex justify-center flex-wrap gap-6">
+                                <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                    <img src="/assets/team/placeholder.jpeg" alt="Zugführer Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                    <p class="font-semibold text-white">Zugführer</p>
+                                    <p class="text-gray-400">[NAME]</p>
+                                </div>
+                                <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                    <img src="/assets/team/placeholder.jpeg" alt="Berater des Zugführers Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                    <p class="font-semibold text-white">Berater des Zugführers</p>
+                                    <p class="text-gray-400">[NAME]</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Gruppenführung -->
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4 text-purple-400">Gruppenführung</h3>
+                            <div class="flex justify-center flex-wrap gap-6">
+                                <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                    <img src="/assets/team/placeholder.jpeg" alt="Gruppenführer Alpha Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                    <p class="font-semibold text-white">Gruppenführer Alpha</p>
+                                    <p class="text-gray-400">[NAME]</p>
+                                </div>
+                                <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                    <img src="/assets/team/placeholder.jpeg" alt="Gruppenführer Bravo Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                    <p class="font-semibold text-white">Gruppenführer Bravo</p>
+                                    <p class="text-gray-400">[NAME]</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-1/2 h-1 bg-purple-500 rounded-full mx-auto my-8"></div>
+
+                        <!-- Alpha Trupp -->
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4 text-purple-400">Alpha Trupp</h3>
+                            <!-- Truppführer Alpha 1 -->
+                            <div class="mt-8">
+                                <h4 class="text-xl font-bold mb-4 text-white">Truppführer Alpha 1</h4>
+                                <div class="flex justify-center flex-wrap gap-6">
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppführer Alpha 1 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppführer Alpha 1</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppman 1 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppman 1</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppman 2 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppman 2</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppman 3 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppman 3</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppman 4 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppman 4</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppman 5 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppman 5</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Separator -->
+                            <div class="w-1/2 h-1 bg-purple-500 rounded-full mx-auto my-8"></div>
+                            <!-- Truppführer Alpha 2 -->
+                            <div class="mt-8">
+                                <h4 class="text-xl font-bold mb-4 text-white">Truppführer Alpha 2</h4>
+                                <div class="flex justify-center flex-wrap gap-6">
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppführer Alpha 2 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppführer Alpha 2</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppman 1 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppman 1</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppman 2 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppman 2</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppman 3 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppman 3</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppman 4 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppman 4</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppman 5 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppman 5</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-1/2 h-1 bg-purple-500 rounded-full mx-auto my-8"></div>
+
+                        <!-- Bravo Trupp -->
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4 text-purple-400">Bravo Trupp</h3>
+                            <!-- Truppführer Bravo 1 -->
+                            <div class="mt-8">
+                                <h4 class="text-xl font-bold mb-4 text-white">Truppführer Bravo 1</h4>
+                                <div class="flex justify-center flex-wrap gap-6">
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppführer Bravo 1 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppführer Bravo 1</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppman 1 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppman 1</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppman 2 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppman 2</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppman 3 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppman 3</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppman 4 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppman 4</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppman 5 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppman 5</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Separator -->
+                            <div class="w-1/2 h-1 bg-purple-500 rounded-full mx-auto my-8"></div>
+                            <!-- Truppführer Bravo 2 -->
+                            <div class="mt-8">
+                                <h4 class="text-xl font-bold mb-4 text-white">Truppführer Bravo 2</h4>
+                                <div class="flex justify-center flex-wrap gap-6">
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppführer Bravo 2 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppführer Bravo 2</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppman 1 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppman 1</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppman 2 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppman 2</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppman 3 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppman 3</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppman 4 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppman 4</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-700 w-32 h-44">
+                                        <img src="/assets/team/placeholder.jpeg" alt="Truppman 5 Avatar" class="w-24 h-24 rounded-full mb-2 border-2 border-purple-900">
+                                        <p class="font-semibold text-white">Truppman 5</p>
+                                        <p class="text-gray-400">[NAME]</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Dienstvorschriften -->
+            <div id="dienstvorschriften" class="tab-content">
+                <div class="bg-gray-800 p-6 rounded-2xl shadow-lg border border-purple-900 mb-8">
+                    <h2 class="text-3xl font-bold mb-4 text-white">Kleiderordnung des Mobilen Einsatzkommandos</h2>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold mb-2 text-red-400">🚫 Verboten</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-300">
+                            <li>Kleidung, die mit Gangs in Verbindung gebracht wird</li>
+                            <li>Auftreten als andere staatliche Organisation (z. B. SEK, Feuerwehr, Rettungsdienst)</li>
+                            <li>Unangemessene oder unprofessionelle Kleidung im Dienst</li>
+                            <li>Tragen von politischen oder kontroversen Symbolen</li>
+                            <li>Kleidung die das Ansehen des MEK's negativ beeinflusst</li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold mb-2 text-green-400">✅ Empfohlen</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-300">
+                            <li>Tragen einer Maskierung</li>
+                            <li>Tragen einer kugelsicheren Weste</li>
+                        </ul>
+                        
+                        <p class="text-gray-300 mb-1">Offizielle Kleidung findet ihr hier:</p>
+                        <a href="https://www.roblox.com/communities/34854955/Craftings-Rp-Clothing#!/store" class="text-blue-400 hover:text-blue-300 underline" target="_blank">Roblox Store</a>
+                        <a>Oder unter dem Tab "Kleidung"</a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 p-6 rounded-2xl shadow-lg border border-purple-900 mb-8">
+                    <h2 class="text-3xl font-bold mb-4 text-white">Einsatzmittelordnung des Mobilen Einsatzkommandos</h2>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold mb-2 text-red-400">🚫 Verboten</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-300">
+                            <li>Jegliche Ausrüstung mit "S.W.A.T" Schriftzug</li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold mb-2 text-green-400">✅ Empfohlen</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-300">
+                            <li>Duty Beld</li>
+                            <li>Fire Extinguischer</li>
+                            <li>Riot Shield</li>
+                            <li>Cones</li>
+                            <li>Pepper Spray</li>
+                            <li>Taser</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 p-6 rounded-2xl shadow-lg border border-purple-900 mb-8">
+                    <h2 class="text-3xl font-bold mb-4 text-white">Fahrzeugordnung des Mobilen Einsatzkommandos</h2>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold mb-2 text-red-400">🚫 Verboten</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-300">
+                            <li>Jegliche Highspeed Unit</li>
+                            <li>Bearcat  (Außer mit Bearcat Schein)</li></li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold mb-2 text-green-400">✅ Empfohlen</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-300">
+                            <li>Falcon eStallion</li>
+                            <li>Bullhorn Prancer Pursuit Widebody</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 p-6 rounded-2xl shadow-lg border border-purple-900 mb-8">
+                    <h2 class="text-3xl font-bold mb-4 text-white">Waffenordnung des Mobilen Einsatzkommandos</h2>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold mb-2 text-red-400">🚫 Verboten</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-300">
+                            <li>Orsis T5000 (Außer mit Scharfschützen Schein)</li>
+                            <li>Bernelli M4 (Außer mit Schrotflinten Schein)</li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold mb-2 text-green-400">✅ Empfohlen</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-300">
+                            <li>M4A1</li>
+                            <li>Kahr-CW9</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 p-6 rounded-2xl shadow-lg border border-purple-900 mb-8">
+                    <h2 class="text-3xl font-bold mb-4 text-white">Verhaltenskodex des Mobilen Einsatzkommandos</h2>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold mb-2 text-red-400">🚫 Verboten</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-300">
+                            <li>Unprofessionelles Verhalten im Dienst</li>
+                            <li>Missbrauch von Befugnissen</li>
+                            <li>Verstoß gegen die Dienstvorschriften</li>
+                            <li>Diskriminierung oder Belästigung von Kollegen oder Zivilisten</li>
+                            <li>Verwendung von Gewalt ohne rechtfertigenden Grund</li>
+                            <li>Nichteinhaltung von Befehlen der Vorgesetzten</li>
+                            <li>Verbreitung von vertraulichen Informationen</li>
+                            <li>Alkoholkonsum oder Drogenmissbrauch im Dienst</li>
+                            <li>Korruption oder Bestechung</li>
+                            <li>Unangemessene Nutzung von Einsatzmitteln</li>
+                            <li>Verstoß gegen die Gesetze und Vorschriften des Landes</li>
+                            <li>Unentschuldigtes Fehlen oder Verspätung zum Dienst</li>
+                            <li>Unangemessene Nutzung von sozialen Medien im Zusammenhang mit dem Dienst</li>
+                            <li>Verstoß gegen die Kleiderordnung</li>
+                            <li>Unangemessene Kommunikation mit der Öffentlichkeit</li>
+                            <li>Verstoß gegen die Fahrzeugordnung</li>
+                            <li>Unangemessene Nutzung von Waffen</li>
+                        </ul>
+
+                        <div class="mb-6">
+                        <h3 class="text-xl font-bold mb-2 text-green-400">✅ Empfohlen</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-300">
+                            <li>Dienstnummern müssen nur gegenüber eines Anderen Polizisten Rausgegeben werden (Anwärter zählen nicht)</li>
+                            <li>Immer Höflich und Respektvoll bleiben</li>
+                            <li>Immer Professionell Auftreten</li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <!-- Tab: Kleidung -->
+            <div id="kleidung" class="tab-content">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- MEK ZF -->
+                    <div class="group bg-gray-800 p-6 rounded-2xl shadow-lg border border-purple-900 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative cursor-pointer flex flex-col items-center justify-center text-center w-full aspect-square" onclick="redirectToRoblox('https://www.roblox.com/catalog/122184072941346')">
+                        <h3 class="text-2xl font-bold mb-2 text-white">MEK ZF</h3>
+                        <p class="text-gray-400">MEK Zugführer</p>
+                        <div class="absolute inset-0 bg-black bg-opacity-75 hidden group-hover:flex items-center justify-center transition-all duration-300 rounded-2xl">
+                            <img src="assets/kleidung/ZF.png" alt="Uniform des Zugführers" class="w-full h-full object-cover rounded-2xl p-4">
+                        </div>
+                    </div>
+
+                    <!-- MEK GFA -->
+                    <div class="group bg-gray-800 p-6 rounded-2xl shadow-lg border border-purple-900 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative cursor-pointer flex flex-col items-center justify-center text-center w-full aspect-square" onclick="redirectToRoblox('https://www.roblox.com/catalog/109317971247544')">
+                        <h3 class="text-2xl font-bold mb-2 text-white">MEK GFA</h3>
+                        <p class="text-gray-400">MEK Gruppenführer Alpha</p>
+                        <div class="absolute inset-0 bg-black bg-opacity-75 hidden group-hover:flex items-center justify-center transition-all duration-300 rounded-2xl">
+                            <img src="assets/kleidung/GFA.png" alt="Uniform des Gruppenführers Alpha" class="w-full h-full object-cover rounded-2xl p-4">
+                        </div>
+                    </div>
+
+                    <!-- MEK GFB -->
+                    <div class="group bg-gray-800 p-6 rounded-2xl shadow-lg border border-purple-900 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative cursor-pointer flex flex-col items-center justify-center text-center w-full aspect-square" onclick="redirectToRoblox('https://www.roblox.com/catalog/128188427045005')">
+                        <h3 class="text-2xl font-bold mb-2 text-white">MEK GFB</h3>
+                        <p class="text-gray-400">MEK Gruppenführer Bravo</p>
+                        <div class="absolute inset-0 bg-black bg-opacity-75 hidden group-hover:flex items-center justify-center transition-all duration-300 rounded-2xl">
+                            <img src="assets/kleidung/GFB.png" alt="Uniform des Gruppenführers Bravo" class="w-full h-full object-cover rounded-2xl p-4">
+                        </div>
+                    </div>
+
+                    <!-- MEK TA1 -->
+                    <div class="group bg-gray-800 p-6 rounded-2xl shadow-lg border border-purple-900 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative cursor-pointer flex flex-col items-center justify-center text-center w-full aspect-square" onclick="redirectToRoblox('https://www.roblox.com/catalog/78287652594392')">
+                        <h3 class="text-2xl font-bold mb-2 text-white">MEK TA1</h3>
+                        <p class="text-gray-400">MEK Truppmann Alpha 1</p>
+                        <div class="absolute inset-0 bg-black bg-opacity-75 hidden group-hover:flex items-center justify-center transition-all duration-300 rounded-2xl">
+                            <img src="assets/kleidung/TA1.png" alt="Uniform des Truppmanns Alpha 1" class="w-full h-full object-cover rounded-2xl p-4">
+                        </div>
+                    </div>
+
+                    <!-- MEK TA2 -->
+                    <div class="group bg-gray-800 p-6 rounded-2xl shadow-lg border border-purple-900 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative cursor-pointer flex flex-col items-center justify-center text-center w-full aspect-square" onclick="redirectToRoblox('https://www.roblox.com/catalog/131060025220946')">
+                        <h3 class="text-2xl font-bold mb-2 text-white">MEK TA2</h3>
+                        <p class="text-gray-400">MEK Truppmann Alpha 2</p>
+                        <div class="absolute inset-0 bg-black bg-opacity-75 hidden group-hover:flex items-center justify-center transition-all duration-300 rounded-2xl">
+                            <img src="assets/kleidung/TA2.png" alt="Uniform des Truppmanns Alpha 2" class="w-full h-full object-cover rounded-2xl p-4">
+                        </div>
+                    </div>
+
+                    <!-- MEK TB1 -->
+                    <div class="group bg-gray-800 p-6 rounded-2xl shadow-lg border border-purple-900 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative cursor-pointer flex flex-col items-center justify-center text-center w-full aspect-square" onclick="redirectToRoblox('https://www.roblox.com/catalog/86324303277841')">
+                        <h3 class="text-2xl font-bold mb-2 text-white">MEK TB1</h3>
+                        <p class="text-gray-400">MEK Truppmann Bravo 1</p>
+                        <div class="absolute inset-0 bg-black bg-opacity-75 hidden group-hover:flex items-center justify-center transition-all duration-300 rounded-2xl">
+                            <img src="assets/kleidung/TB1.png" alt="Uniform des Truppmanns Bravo 1" class="w-full h-full object-cover rounded-2xl p-4">
+                        </div>
+                    </div>
+
+                    <!-- MEK TB2 -->
+                    <div class="group bg-gray-800 p-6 rounded-2xl shadow-lg border border-purple-900 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative cursor-pointer flex flex-col items-center justify-center text-center w-full aspect-square" onclick="redirectToRoblox('https://www.roblox.com/catalog/132033221742418')">
+                        <h3 class="text-2xl font-bold mb-2 text-white">MEK TB2</h3>
+                        <p class="text-gray-400">MEK Truppmann Bravo 2</p>
+                        <div class="absolute inset-0 bg-black bg-opacity-75 hidden group-hover:flex items-center justify-center transition-all duration-300 rounded-2xl">
+                            <img src="assets/kleidung/TB2.png" alt="Uniform des Truppmanns Bravo 2" class="w-full h-full object-cover rounded-2xl p-4">
+                        </div>
+                    </div>
+
+                    <!-- MEK TFA1 -->
+                    <div class="group bg-gray-800 p-6 rounded-2xl shadow-lg border border-purple-900 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative cursor-pointer flex flex-col items-center justify-center text-center w-full aspect-square" onclick="redirectToRoblox('https://www.roblox.com/catalog/129885799080231')">
+                        <h3 class="text-2xl font-bold mb-2 text-white">MEK TFA1</h3>
+                        <p class="text-gray-400">MEK Truppenführer Alpha 1</p>
+                        <div class="absolute inset-0 bg-black bg-opacity-75 hidden group-hover:flex items-center justify-center transition-all duration-300 rounded-2xl">
+                            <img src="assets/kleidung/TFA1.png" alt="Uniform des Truppenführers Alpha 1" class="w-full h-full object-cover rounded-2xl p-4">
+                        </div>
+                    </div>
+
+                    <!-- MEK TFA2 -->
+                    <div class="group bg-gray-800 p-6 rounded-2xl shadow-lg border border-purple-900 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative cursor-pointer flex flex-col items-center justify-center text-center w-full aspect-square" onclick="redirectToRoblox('https://www.roblox.com/catalog/106790068517868')">
+                        <h3 class="text-2xl font-bold mb-2 text-white">MEK TFA2</h3>
+                        <p class="text-gray-400">MEK Truppenführer Alpha 2</p>
+                        <div class="absolute inset-0 bg-black bg-opacity-75 hidden group-hover:flex items-center justify-center transition-all duration-300 rounded-2xl">
+                            <img src="assets/kleidung/TFA2.png" alt="Uniform des Truppenführers Alpha 2" class="w-full h-full object-cover rounded-2xl p-4">
+                        </div>
+                    </div>
+
+                    <!-- MEK TFB1 -->
+                    <div class="group bg-gray-800 p-6 rounded-2xl shadow-lg border border-purple-900 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative cursor-pointer flex flex-col items-center justify-center text-center w-full aspect-square" onclick="redirectToRoblox('https://www.roblox.com/catalog/114322522757603')">
+                        <h3 class="text-2xl font-bold mb-2 text-white">MEK TFB1</h3>
+                        <p class="text-gray-400">MEK Truppenführer Bravo 1</p>
+                        <div class="absolute inset-0 bg-black bg-opacity-75 hidden group-hover:flex items-center justify-center transition-all duration-300 rounded-2xl">
+                            <img src="assets/kleidung/TFB1.png" alt="Uniform des Truppenführers Bravo 1" class="w-full h-full object-cover rounded-2xl p-4">
+                        </div>
+                    </div>
+
+                    <!-- MEK TFB2 -->
+                    <div class="group bg-gray-800 p-6 rounded-2xl shadow-lg border border-purple-900 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative cursor-pointer flex flex-col items-center justify-center text-center w-full aspect-square" onclick="redirectToRoblox('https://www.roblox.com/catalog/127733625898905')">
+                        <h3 class="text-2xl font-bold mb-2 text-white">MEK TFB2</h3>
+                        <p class="text-gray-400">MEK Truppenführer Bravo 2</p>
+                        <div class="absolute inset-0 bg-black bg-opacity-75 hidden group-hover:flex items-center justify-center transition-all duration-300 rounded-2xl">
+                            <img src="assets/kleidung/TFB2.png" alt="Uniform des Truppenführers Bravo 2" class="w-full h-full object-cover rounded-2xl p-4">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tab: Changelogs -->
+            <div id="changelogs" class="tab-content">
+                <div class="bg-gray-800 p-6 rounded-2xl shadow-lg border border-purple-900 text-center">
+                    <h2 class="text-3xl font-bold mb-4 text-white">Changelogs</h2>
+                    <p class="text-gray-400">Hier werden zukünftige Änderungen und Updates am System aufgelistet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript für die Weiterleitung und Tab-Funktion -->
+    <script>
+        function redirectToRoblox(url) {
+            window.open(url, '_blank').focus();
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab-button');
+            const contents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const targetId = tab.getAttribute('data-tab');
+
+                    // Tabs inaktiv machen und Target-Tab aktiv machen
+                    tabs.forEach(t => t.classList.remove('active', 'bg-purple-600', 'hover:bg-purple-700'));
+                    tab.classList.add('active', 'bg-purple-600', 'hover:bg-purple-700');
+
+                    // Alle Inhalte verstecken
+                    contents.forEach(content => content.classList.remove('active'));
+
+                    // Den gewünschten Inhalt anzeigen
+                    const targetContent = document.getElementById(targetId);
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+
+            // Initialen Zustand setzen
+            const initialTab = document.querySelector('.tab-button.active');
+            if (initialTab) {
+                initialTab.classList.add('bg-purple-600', 'hover:bg-purple-700');
+            }
+        });
+    </script>
+</body>
+</html>
